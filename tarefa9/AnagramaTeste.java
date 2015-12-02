@@ -4,23 +4,20 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class AnagramaTeste {
+public class Testes {
 
 	@Test
 	public void test() {
-		assertTrue(Anagrama.eAnagrama("",""));
-		assertTrue(Anagrama.eAnagrama(" ",""));
-		assertTrue(Anagrama.eAnagrama("a","a "));
-		assertFalse(Anagrama.eAnagrama("a ","b"));
-		assertTrue(Anagrama.eAnagrama("ab","ab"));
-		assertTrue(Anagrama.eAnagrama("ab","a b"));
-		assertTrue(Anagrama.eAnagrama("b a","a b"));
-		assertTrue(Anagrama.eAnagrama("ab", "ba"));
-		assertFalse(Anagrama.eAnagrama("ba", "a"));
-		assertTrue(Anagrama.eAnagrama("amor", "roma"));
-		assertTrue(Anagrama.eAnagrama("alan smithee", "the alias men"));
-		assertFalse(Anagrama.eAnagrama("amoor", "roma"));
-		assertFalse(Anagrama.eAnagrama("Batata", "Banana"));
+		assertTrue(Anagrama.comparar("",""));
+		assertTrue(Anagrama.comparar(" ",""));
+		assertTrue(Anagrama.comparar("a","a "));
+		assertFalse(Anagrama.comparar("a ","b"));
+		assertTrue(Anagrama.comparar("ab","ab"));
+		assertTrue(Anagrama.comparar("ab","a b"));
+		assertTrue(Anagrama.comparar("b a","a b"));
+		assertTrue(Anagrama.comparar("ab", "ba"));
+		assertFalse(Anagrama.comparar("ba", "a"));
+		assertTrue(Anagrama.comparar("Alan Smithee", "The alias men"));		
 	}
 
 }
