@@ -5,27 +5,17 @@ import java.util.List;
 
 public class Anagrama {
 
-	public static boolean eAnagrama(String palavra1, String palavra2) {
-		palavra2=palavra2.toLowerCase();
-		palavra1=palavra1.toLowerCase();
-		int conta=0;
+	public static boolean comparar(String word1, String word1) 
+	{
+		word1 = word1.toLowerCase().replaceAll(" ", "");
+		word2 = word2.toLowerCase().replaceAll(" ", "");
 		
+		List<Character> lista1 = new ArrayList<Character>();
+		List<Character> lista2 = new ArrayList<Character>();
 		
-		List<Character>listaA=new ArrayList<Character>();
-		List<Character>listaB=new ArrayList<Character>();
-		for(char c:palavra1.replace(" ", "").toCharArray())
-		{
-			listaA.add(c);
-		}
-		for(char c:palavra2.replace(" ", "").toCharArray())
-		{
-			listaB.add(c);
-		}
-		return listaA.containsAll(listaB) && listaA.size()==listaB.size();
+		for(char c : word1.toCharArray())  lista1.add(c);
+		for(char c : word2.toCharArray())  lista2.add(c);
 		
-		
-		
+		return lista1.containsAll(lista2) && lista1.size() == lista2.size();
 	}
-	
-
 }
