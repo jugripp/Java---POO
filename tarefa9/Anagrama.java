@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Anagrama {
 
-	public static boolean comparar(String word1, String word1) 
+	public static boolean comparar(String word1, String word2) 
 	{
 		word1 = word1.toLowerCase().replaceAll(" ", "");
 		word2 = word2.toLowerCase().replaceAll(" ", "");
